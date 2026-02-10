@@ -1,0 +1,114 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Container */
+.App {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: -1px;
+  /* The Gradient Magic */
+  background: linear-gradient(to right, #1e293b, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* The Task Card */
+li {
+  list-style: none;
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  border-left: 5px solid #cbd5e1; /* Default gray */
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Priority Borders */
+li[data-priority="High"] { border-left-color: #ef4444; }
+li[data-priority="Medium"] { border-left-color: #f59e0b; }
+li[data-priority="Low"] { border-left-color: #10b981; }
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
